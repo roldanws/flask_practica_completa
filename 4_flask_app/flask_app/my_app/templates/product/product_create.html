@@ -1,0 +1,8 @@
+{% extends 'product/base.html' %} {% block content %}
+<form action=" {{ url_for('product.create') }} " method="post">
+
+    Nombre: {{ form.nombre(class="form-control") }} Marca: {{ form.marca(class="form-control") }} Precio: {{ form.precio(class="form-control") }}
+
+    <button class="btn btn-primary mt-3" type="submit">Crear</button>
+</form>
+{% endblock %}

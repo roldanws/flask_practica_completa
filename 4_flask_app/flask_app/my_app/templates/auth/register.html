@@ -1,0 +1,8 @@
+{% extends 'product/base.html' %} {% block content %}
+<form action=" {{ url_for('fauth.register') }} " method="post">
+
+    Nombre de usuario: {{ form.username(class="form-control") }} Password: {{ form.password(class="form-control") }} Confirmar Password: {{ form.confirm(class="form-control") }}
+
+    <button class="btn btn-primary mt-3" type="submit">Registrarme</button>
+</form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'product/base.html' %} {% block content %}
+<form action=" {{ url_for('fauth.login') }} " method="post">
+
+    Nombre de usuario: {{ form.username(class="form-control") }} Password: {{ form.password(class="form-control") }} {{ form.next() }}
+    <button class="btn btn-primary mt-3" type="submit">Iniciar sesion</button>
+</form>
+<script>
+    var params = new URLSearchParams(window.location.search)
+    if (params.has("next"))
+        document.getElementById("next").value = params.get("next")
+    console.log(document.getElementById("next").value)
+</script>
+{% endblock %}
